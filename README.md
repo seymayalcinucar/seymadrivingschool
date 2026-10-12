@@ -3,6 +3,10 @@
 Website for Seyma Driving School: automatic-only driving lessons with a DVSA Approved Driving
 Instructor (ADI). Plain HTML and CSS in `site/`; no build step, no third-party requests.
 
+Colours and the car artwork (`site/img/car.png`) come from the school's own flyer. The image has a
+flat `#0f3d3e` background, so it must sit on exactly that colour (`--brand` in `css/style.css`).
+`site/og-image.png` (1200x630) is the preview shown when the link is shared.
+
 ## How it works
 
 Every push to `main` runs `.github/workflows/pages.yml`, which uploads `site/` as it is and deploys
