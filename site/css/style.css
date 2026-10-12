@@ -674,6 +674,174 @@ p {
   margin: 0;
 }
 
+/* Enquiry form: opens from every WhatsApp button and builds the message from the answers */
+
+[hidden] {
+  display: none !important;
+}
+
+html:has(dialog[open]) {
+  overflow: hidden;
+}
+
+.enquiry {
+  width: min(100% - 1.5rem, 32rem);
+  max-height: calc(100dvh - 1.5rem);
+  padding: 0;
+  border: 0;
+  border-radius: 1.5rem;
+  background: #fff;
+  color: var(--ink);
+  box-shadow: 0 30px 80px -20px rgba(16, 41, 42, 0.6);
+  outline: none;
+}
+
+.enquiry::backdrop {
+  background: rgba(16, 41, 42, 0.6);
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+}
+
+.enquiry form {
+  position: relative;
+  display: grid;
+  gap: 1rem;
+  padding: 1.75rem 1.5rem 1.5rem;
+}
+
+.enquiry h2 {
+  padding-right: 2.75rem;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.enquiry-intro {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+.enquiry-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.enquiry-facts li {
+  padding: 0.3rem 0.85rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--tint);
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.enquiry label,
+.enquiry legend {
+  display: grid;
+  gap: 0.4rem;
+  font-size: 0.9375rem;
+  font-weight: 700;
+}
+
+.enquiry input[type="text"],
+.enquiry textarea {
+  width: 100%;
+  padding: 0.75rem 0.9rem;
+  border: 1.5px solid var(--line);
+  border-radius: 0.75rem;
+  background: #fff;
+  color: var(--ink);
+  font: inherit;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.enquiry textarea {
+  min-height: 4.5rem;
+  resize: vertical;
+}
+
+.enquiry input[type="text"]:focus-visible,
+.enquiry textarea:focus-visible {
+  border-color: var(--brand-soft);
+  outline: 3px solid rgba(23, 89, 90, 0.25);
+}
+
+.enquiry fieldset {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.enquiry legend {
+  margin-bottom: 0.5rem;
+  padding: 0;
+}
+
+.enquiry .choice {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.choice input {
+  position: absolute;
+  opacity: 0;
+}
+
+.choice span {
+  display: inline-block;
+  min-width: 4.5rem;
+  padding: 0.55rem 1.1rem;
+  border: 1.5px solid var(--line);
+  border-radius: 999px;
+  text-align: center;
+}
+
+.choice input:checked + span {
+  border-color: var(--brand);
+  background: var(--brand);
+  color: var(--cream);
+}
+
+.choice input:focus-visible + span {
+  outline: 3px solid rgba(23, 89, 90, 0.25);
+}
+
+.enquiry .btn {
+  width: 100%;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.enquiry-note {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+.enquiry-close {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  display: grid;
+  place-items: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border: 0;
+  border-radius: 50%;
+  background: var(--tint);
+  color: var(--ink);
+  cursor: pointer;
+}
+
 /* Call and WhatsApp bar pinned to the bottom of phone screens */
 
 .callbar {

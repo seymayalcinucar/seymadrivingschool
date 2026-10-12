@@ -50,6 +50,7 @@
   <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9L12 3Z"/></symbol>
   <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5h.01"/></symbol>
   <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
   <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></symbol>
 </svg>
 
@@ -65,7 +66,7 @@
       <a href="#areas">Areas</a>
       <a href="#faq">Questions</a>
     </nav>
-    <a class="btn btn-brand btn-sm" href="https://wa.me/447935755151?text=Hi%20Seyma%2C%20I%27d%20like%20to%20ask%20about%20automatic%20driving%20lessons." target="_blank" rel="noopener">
+    <a class="btn btn-brand btn-sm" href="https://wa.me/447935755151?text=Hi%20Seyma%2C%20I%27d%20like%20to%20arrange%20automatic%20driving%20lessons.%0A%0AName%3A%20%0AArea%2Fpostcode%3A%20%0ALessons%20before%3A%20%0AAvailable%3A%20" target="_blank" rel="noopener" data-enquiry>
       <svg class="icon"><use href="#i-chat"/></svg>
       <span class="long">Message Seyma</span><span class="short">Message</span>
     </a>
@@ -81,7 +82,7 @@
           <h1>Learn to drive with a <span>female instructor</span></h1>
           <p class="lead">Automatic driving lessons with Seyma, a fully qualified DVSA Approved Driving Instructor. The same instructor at every lesson, from your first drive to test day.</p>
           <p class="actions">
-            <a class="btn btn-accent" href="https://wa.me/447935755151?text=Hi%20Seyma%2C%20I%27d%20like%20to%20ask%20about%20automatic%20driving%20lessons." target="_blank" rel="noopener"><svg class="icon"><use href="#i-chat"/></svg>Message on WhatsApp</a>
+            <a class="btn btn-accent" href="https://wa.me/447935755151?text=Hi%20Seyma%2C%20I%27d%20like%20to%20arrange%20automatic%20driving%20lessons.%0A%0AName%3A%20%0AArea%2Fpostcode%3A%20%0ALessons%20before%3A%20%0AAvailable%3A%20" target="_blank" rel="noopener" data-enquiry><svg class="icon"><use href="#i-chat"/></svg>Message on WhatsApp</a>
             <a class="btn btn-ghost" href="tel:+447935755151"><svg class="icon"><use href="#i-phone"/></svg>Call 07935 755151</a>
           </p>
           <p class="hero-note">Seyma is often teaching and cannot always pick up. If your call is not answered, send a message and she will get back to you.</p>
@@ -220,7 +221,7 @@
       <div data-reveal>
         <p class="eyebrow">Questions</p>
         <h2>What learners ask before they start</h2>
-        <p class="lede">Something else on your mind? <a href="https://wa.me/447935755151?text=Hi%20Seyma%2C%20I%27d%20like%20to%20ask%20about%20automatic%20driving%20lessons." target="_blank" rel="noopener">Message Seyma on WhatsApp</a>.</p>
+        <p class="lede">Something else on your mind? <a href="https://wa.me/447935755151?text=Hi%20Seyma%2C%20I%27d%20like%20to%20arrange%20automatic%20driving%20lessons.%0A%0AName%3A%20%0AArea%2Fpostcode%3A%20%0ALessons%20before%3A%20%0AAvailable%3A%20" target="_blank" rel="noopener" data-enquiry>Message Seyma on WhatsApp</a>.</p>
       </div>
       <div class="faq" data-reveal>
         <details>
@@ -245,7 +246,7 @@
         </details>
         <details>
           <summary>How much do lessons cost?<svg class="icon"><use href="#i-plus"/></svg></summary>
-          <p>Send a WhatsApp message for current prices and availability.</p>
+          <p>Lessons are £40 per hour. Send a WhatsApp message to check availability.</p>
         </details>
         <details>
           <summary>What if my call is not answered?<svg class="icon"><use href="#i-plus"/></svg></summary>
@@ -263,7 +264,7 @@
         <p class="lede">Send Seyma a message to ask about lessons and availability. She is often in a lesson, so if your call is not answered, message her and she will get back to you.</p>
       </div>
       <div class="contact-grid" data-reveal>
-        <a class="contact-card" href="https://wa.me/447935755151?text=Hi%20Seyma%2C%20I%27d%20like%20to%20ask%20about%20automatic%20driving%20lessons." target="_blank" rel="noopener">
+        <a class="contact-card" href="https://wa.me/447935755151?text=Hi%20Seyma%2C%20I%27d%20like%20to%20arrange%20automatic%20driving%20lessons.%0A%0AName%3A%20%0AArea%2Fpostcode%3A%20%0ALessons%20before%3A%20%0AAvailable%3A%20" target="_blank" rel="noopener" data-enquiry>
           <span class="icon-badge"><svg class="icon"><use href="#i-chat"/></svg></span>
           <span class="label">WhatsApp</span>
           <span class="value">Message Seyma <svg class="icon"><use href="#i-arrow"/></svg></span>
@@ -292,8 +293,39 @@
   </div>
 </footer>
 
+<dialog class="enquiry" id="enquiry" aria-labelledby="enquiry-title">
+  <form>
+    <button type="button" class="enquiry-close" data-close aria-label="Close"><svg class="icon"><use href="#i-close"/></svg></button>
+    <h2 id="enquiry-title">Message Seyma on WhatsApp</h2>
+    <p class="enquiry-intro">Thank you for getting in touch with Seyma Driving School. Fill in your details and WhatsApp will open with your message ready to send.</p>
+    <ul class="enquiry-facts">
+      <li>Automatic only</li>
+      <li>£40 per hour</li>
+    </ul>
+    <label>Your full name
+      <input type="text" name="name" autocomplete="name" required>
+    </label>
+    <label>Area or postcode where you live
+      <input type="text" name="area" autocomplete="postal-code" required>
+    </label>
+    <fieldset>
+      <legend>Have you had driving lessons before?</legend>
+      <label class="choice"><input type="radio" name="before" value="no" checked><span>No</span></label>
+      <label class="choice"><input type="radio" name="before" value="yes"><span>Yes</span></label>
+    </fieldset>
+    <label data-hours hidden>Roughly how many lessons or hours?
+      <input type="text" name="hours">
+    </label>
+    <label>Days and times you are generally available
+      <textarea name="times" rows="2"></textarea>
+    </label>
+    <button type="submit" class="btn btn-accent"><svg class="icon"><use href="#i-chat"/></svg>Send on WhatsApp</button>
+    <p class="enquiry-note">Nothing is sent until you press send in WhatsApp. Seyma will get back to you as soon as possible to arrange your lessons.</p>
+  </form>
+</dialog>
+
 <div class="callbar">
-  <a class="btn btn-accent" href="https://wa.me/447935755151?text=Hi%20Seyma%2C%20I%27d%20like%20to%20ask%20about%20automatic%20driving%20lessons." target="_blank" rel="noopener"><svg class="icon"><use href="#i-chat"/></svg>WhatsApp</a>
+  <a class="btn btn-accent" href="https://wa.me/447935755151?text=Hi%20Seyma%2C%20I%27d%20like%20to%20arrange%20automatic%20driving%20lessons.%0A%0AName%3A%20%0AArea%2Fpostcode%3A%20%0ALessons%20before%3A%20%0AAvailable%3A%20" target="_blank" rel="noopener" data-enquiry><svg class="icon"><use href="#i-chat"/></svg>WhatsApp</a>
   <a class="btn btn-brand" href="tel:+447935755151"><svg class="icon"><use href="#i-phone"/></svg>Call</a>
 </div>
 
