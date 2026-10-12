@@ -401,28 +401,9 @@ p {
   font-size: 1rem;
 }
 
-.card-cta {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  gap: 0.75rem;
-  border-color: transparent;
-  background: var(--brand);
-  color: var(--cream);
-}
-
-.card.card-cta h3 {
-  margin: 0;
-  font-size: 1.25rem;
-}
-
-.card.card-cta p {
-  color: rgba(247, 243, 234, 0.8);
-}
-
-.card-cta .btn {
-  margin-top: 0.5rem;
+.after-cards {
+  margin: 1.75rem 0 0;
+  color: var(--muted);
 }
 
 /* What you will learn: an open list, lighter than the card grids around it */
@@ -486,6 +467,12 @@ p {
   font-size: 1.125rem;
   font-weight: 600;
   letter-spacing: 0;
+}
+
+.price-note {
+  margin: 0.75rem 0 0;
+  color: rgba(247, 243, 234, 0.8);
+  font-weight: 600;
 }
 
 .ticks {
@@ -661,6 +648,39 @@ p {
   letter-spacing: 0;
 }
 
+.also {
+  margin-top: 2rem;
+}
+
+.also h3 {
+  margin-bottom: 0.875rem;
+  font-size: 1.0625rem;
+  font-weight: 800;
+}
+
+.also p {
+  margin: 1rem 0 0;
+  color: var(--muted);
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.chips li {
+  padding: 0.45rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--tint);
+  font-size: 0.9375rem;
+  font-weight: 700;
+}
+
 .faq {
   display: grid;
   gap: 0.75rem;
@@ -706,6 +726,74 @@ p {
   margin: 0;
   padding-bottom: 1.25rem;
   color: var(--muted);
+}
+
+/* Inner pages (show me, tell me) */
+
+.narrow {
+  max-width: 54rem;
+}
+
+.page-hero h1 {
+  font-size: clamp(2.25rem, 5vw, 3.5rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.page-hero .lede {
+  max-width: 44rem;
+}
+
+.faq summary span {
+  flex: 1;
+}
+
+.faq details p + p {
+  margin-top: -0.5rem;
+}
+
+.numbered {
+  display: grid;
+  gap: 0.75rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: item;
+}
+
+.numbered li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #fff;
+  font-weight: 600;
+  counter-increment: item;
+}
+
+.numbered li::before {
+  content: counter(item);
+  display: grid;
+  flex: none;
+  place-items: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  background: var(--accent);
+  color: var(--ink);
+  font-weight: 800;
+}
+
+.source {
+  margin: 1.5rem 0 0;
+  color: var(--muted);
+  font-size: 0.875rem;
+}
+
+.cta .actions {
+  margin-top: 2rem;
 }
 
 /* Contact */
@@ -1144,18 +1232,18 @@ html:has(dialog[open]) {
   }
 
   /* Icon beside the text, so six stacked cards do not make the page endless on a phone */
-  .card:not(.card-cta) {
+  .card {
     display: grid;
     grid-template-columns: auto 1fr;
     column-gap: 1rem;
     padding: 1.25rem;
   }
 
-  .card:not(.card-cta) .icon-badge {
+  .card .icon-badge {
     grid-row: 1 / span 2;
   }
 
-  .card:not(.card-cta) h3 {
+  .card h3 {
     margin: 0 0 0.3rem;
   }
 
