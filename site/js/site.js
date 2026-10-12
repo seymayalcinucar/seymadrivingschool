@@ -41,6 +41,24 @@
     var fields = form.elements;
     var hoursRow = dialog.querySelector("[data-hours]");
     var whatsapp = links[0].href.split("?")[0];
+    // The Turkish pages (site/tr/) write the same message in Turkish.
+    var words = document.documentElement.lang === "tr" ? {
+      hello: "Merhaba Seyma Hanım, otomatik vites direksiyon dersi almak istiyorum.",
+      name: "Ad soyad",
+      area: "Semt/posta kodu",
+      before: "Daha önce ders",
+      yes: "Evet",
+      no: "Hayır",
+      times: "Uygun zamanlar"
+    } : {
+      hello: "Hi Seyma, I'd like to arrange automatic driving lessons.",
+      name: "Name",
+      area: "Area/postcode",
+      before: "Lessons before",
+      yes: "Yes",
+      no: "No",
+      times: "Available"
+    };
 
     links.forEach(function (link) {
       link.addEventListener("click", function (event) {
@@ -73,14 +91,14 @@
       event.preventDefault();
 
       var hours = fields.hours.value.trim();
-      var before = fields.before.value === "yes" ? "Yes" + (hours ? " (" + hours + ")" : "") : "No";
+      var before = fields.before.value === "yes" ? words.yes + (hours ? " (" + hours + ")" : "") : words.no;
       var message = [
-        "Hi Seyma, I'd like to arrange automatic driving lessons.",
+        words.hello,
         "",
-        "Name: " + fields.name.value.trim(),
-        "Area/postcode: " + fields.area.value.trim(),
-        "Lessons before: " + before,
-        "Available: " + fields.times.value.trim()
+        words.name + ": " + fields.name.value.trim(),
+        words.area + ": " + fields.area.value.trim(),
+        words.before + ": " + before,
+        words.times + ": " + fields.times.value.trim()
       ].join("\n");
       var url = whatsapp + "?text=" + encodeURIComponent(message);
       track("generate_lead", { method: "whatsapp" });

@@ -15,6 +15,20 @@
   var GRANTED = "granted";
   var DENIED = "denied";
   var POLICY_HREF = "privacy.html";
+  // The Turkish pages (site/tr/) show the banner in Turkish; their privacy page sits beside them.
+  var TEXT = document.documentElement.lang === "tr" ? {
+    heading: "Bu sitedeki çerezler",
+    body: "Ziyaretçilerin bu siteyi nasıl kullandığını görmek ve siteyi geliştirmek için Google Analytics çerezlerini kullanmak istiyoruz. Bu çerezler isteğe bağlıdır: yalnızca kabul ederseniz kullanılır. ",
+    policy: "Gizlilik ve çerezler",
+    accept: "Analitik çerezleri kabul et",
+    reject: "Analitik çerezleri reddet"
+  } : {
+    heading: "Cookies on this website",
+    body: "We would like to use Google Analytics cookies to see how people use this website, so we can improve it. They are optional: we only set them if you accept. ",
+    policy: "Privacy and cookies",
+    accept: "Accept analytics cookies",
+    reject: "Reject analytics cookies"
+  };
 
   var gaLoaded = false;
   var returnFocusTo = null;
@@ -131,23 +145,23 @@
     banner.setAttribute("role", "region");
     banner.setAttribute("aria-labelledby", "cookie-banner-heading");
 
-    var heading = el("h2", "", "Cookies on this website");
+    var heading = el("h2", "", TEXT.heading);
     heading.id = "cookie-banner-heading";
     banner.appendChild(heading);
 
-    var text = el("p", "", "We would like to use Google Analytics cookies to see how people use this website, so we can improve it. They are optional: we only set them if you accept. ");
-    var link = el("a", "", "Privacy and cookies");
+    var text = el("p", "", TEXT.body);
+    var link = el("a", "", TEXT.policy);
     link.setAttribute("href", POLICY_HREF);
     text.appendChild(link);
     banner.appendChild(text);
 
     var actions = el("div", "cookie-actions");
-    var accept = el("button", "btn btn-brand", "Accept analytics cookies");
+    var accept = el("button", "btn btn-brand", TEXT.accept);
     accept.type = "button";
     accept.addEventListener("click", function () {
       choose(GRANTED);
     });
-    var reject = el("button", "btn btn-brand", "Reject analytics cookies");
+    var reject = el("button", "btn btn-brand", TEXT.reject);
     reject.type = "button";
     reject.addEventListener("click", function () {
       choose(DENIED);

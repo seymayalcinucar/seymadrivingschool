@@ -12,6 +12,20 @@ flat `#0f3d3e` background, so it must sit on exactly that colour (`--brand` in `
 Every push to `main` runs `.github/workflows/pages.yml`, which uploads `site/` as it is and deploys
 it to GitHub Pages.
 
+## Turkish pages
+
+`site/tr/` holds a Turkish copy of every page (`index.html`, `show-me-tell-me.html`,
+`privacy.html`). Each page links to its counterpart from the header and footer and declares the pair
+with `hreflang` tags, so when you change one page, change the other. `js/site.js` (the WhatsApp
+message) and `js/consent.js` (the cookie banner) take their wording from `<html lang>`. The Turkish
+letters ğ, ş and İ are in `css/fonts/plus-jakarta-sans-latin-ext.woff2`, which only pages that use
+them download.
+
+## The car
+
+The safety features in the "The car" section come from Toyota's UK equipment list for the Corolla
+Design grade and from Euro NCAP's 2019 test result. Change the list if the car changes.
+
 ## To do
 
 Open tasks are listed in `todo/todo.md`, with one file per task in `todo/items/`.

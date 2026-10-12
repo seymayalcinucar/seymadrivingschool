@@ -25,7 +25,7 @@ jobs:
       # A phone that cached an older stylesheet would pair it with newer HTML and render a broken
       # page, so every deploy gives the CSS, JS and images a new URL.
       - name: Stamp asset URLs with the commit
-        run: sed -i "s/__V__/${GITHUB_SHA::8}/g" site/*.html
+        run: sed -i "s/__V__/${GITHUB_SHA::8}/g" site/*.html site/tr/*.html
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
