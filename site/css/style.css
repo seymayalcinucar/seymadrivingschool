@@ -259,9 +259,33 @@ p {
   margin: 0;
 }
 
+.hero-google {
+  margin: 1.25rem 0 0;
+}
+
+.hero-google a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--cream);
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-color: rgba(247, 243, 234, 0.4);
+  text-underline-offset: 0.3em;
+}
+
+.hero-google a:hover {
+  text-decoration-color: var(--accent);
+}
+
+.hero-google .icon:first-child {
+  fill: var(--accent);
+  stroke: var(--accent);
+}
+
 .hero-note {
   max-width: 31rem;
-  margin: 1.125rem 0 0;
+  margin: 0.875rem 0 0;
   color: rgba(247, 243, 234, 0.7);
   font-size: 0.9375rem;
 }
