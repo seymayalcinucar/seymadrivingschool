@@ -184,7 +184,8 @@ p {
   gap: 0.7rem;
   margin-right: auto;
   color: var(--ink);
-  font-size: 1.0625rem;
+  font-size: clamp(0.875rem, 4.3vw, 1.0625rem);
+  white-space: nowrap;
   font-weight: 800;
   letter-spacing: -0.015em;
   text-decoration: none;
@@ -255,6 +256,13 @@ p {
   flex-wrap: wrap;
   gap: 0.75rem;
   margin: 0;
+}
+
+.hero-note {
+  max-width: 31rem;
+  margin: 1.125rem 0 0;
+  color: rgba(247, 243, 234, 0.7);
+  font-size: 0.9375rem;
 }
 
 .pills {
@@ -641,6 +649,12 @@ p {
   letter-spacing: -0.015em;
 }
 
+.contact-card .hint {
+  margin-top: 0.35rem;
+  color: rgba(247, 243, 234, 0.7);
+  font-size: 0.9375rem;
+}
+
 /* Footer */
 
 .site-footer {
@@ -776,6 +790,11 @@ p {
 }
 
 @media (max-width: 30rem) {
+  .site-header .wrap {
+    gap: 0.75rem;
+  }
+
+  .site-header .btn .icon,
   .long {
     display: none;
   }
