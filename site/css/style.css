@@ -6,6 +6,7 @@
   --line: #e4e1d9;
   --accent: #0f6b5c;
   --accent-soft: #e6f2ee;
+  --on-accent: #ffffff;
   color-scheme: light dark;
 }
 
@@ -18,6 +19,7 @@
     --line: #2b3541;
     --accent: #5fc9b3;
     --accent-soft: #17302c;
+    --on-accent: #0c1a17;
   }
 }
 
@@ -162,6 +164,59 @@ section + section {
   color: var(--accent);
   font-size: 0.9375rem;
   font-weight: 600;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 2rem 0 0;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.75rem 1.375rem;
+  border: 2px solid var(--accent);
+  border-radius: 0.625rem;
+  background: var(--accent);
+  color: var(--on-accent);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.button.secondary {
+  background: transparent;
+  color: var(--accent);
+}
+
+.contact {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0 0;
+}
+
+.contact div {
+  padding: 1.25rem 1.5rem;
+  border: 1px solid var(--line);
+  border-radius: 0.75rem;
+  background: var(--surface);
+}
+
+.contact dt {
+  color: var(--muted);
+  font-size: 0.9375rem;
+}
+
+.contact dd {
+  margin: 0.25rem 0 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+.contact a {
+  text-decoration: none;
 }
 
 .cards {
