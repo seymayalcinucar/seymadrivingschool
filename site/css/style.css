@@ -198,6 +198,7 @@ p {
 
 .site-header nav a {
   color: var(--muted);
+  white-space: nowrap;
   font-size: 0.9375rem;
   font-weight: 600;
   text-decoration: none;
@@ -298,7 +299,8 @@ p {
 
 .trust {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, auto);
+  justify-content: space-between;
   gap: 0.75rem 1.5rem;
   margin: 0;
   padding: 1.5rem 0 1.75rem;
@@ -377,6 +379,10 @@ p {
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
+.cards-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
 .card:hover {
   transform: translateY(-4px);
   border-color: transparent;
@@ -393,6 +399,116 @@ p {
   margin: 0;
   color: var(--muted);
   font-size: 1rem;
+}
+
+.card-cta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0.75rem;
+  border-color: transparent;
+  background: var(--brand);
+  color: var(--cream);
+}
+
+.card.card-cta h3 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.card.card-cta p {
+  color: rgba(247, 243, 234, 0.8);
+}
+
+.card-cta .btn {
+  margin-top: 0.5rem;
+}
+
+/* What you will learn: an open list, lighter than the card grids around it */
+
+.learn {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.25rem 2.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: learn;
+}
+
+.learn li {
+  padding-top: 1.25rem;
+  border-top: 3px solid var(--accent);
+  counter-increment: learn;
+}
+
+.learn li::before {
+  content: "0" counter(learn);
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--brand-soft);
+  font-size: 0.875rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.learn h3 {
+  margin-bottom: 0.4rem;
+  font-size: 1.125rem;
+  font-weight: 800;
+}
+
+.learn p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+.price-card {
+  padding: clamp(1.75rem, 4vw, 2.5rem);
+  border-radius: 1.5rem;
+  background: var(--brand);
+  color: var(--cream);
+  box-shadow: var(--shadow);
+}
+
+.price {
+  margin: 0;
+  font-size: clamp(3.25rem, 8vw, 4.75rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+
+.price small {
+  color: rgba(247, 243, 234, 0.75);
+  font-size: 1.125rem;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+.ticks {
+  display: grid;
+  gap: 0.75rem;
+  margin: 1.75rem 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ticks li {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-weight: 600;
+}
+
+.ticks .icon {
+  color: var(--accent);
+}
+
+.price-card .btn {
+  width: 100%;
 }
 
 .split {
@@ -537,6 +653,14 @@ p {
   letter-spacing: -0.015em;
 }
 
+.areas small {
+  display: block;
+  color: var(--muted);
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
 .faq {
   display: grid;
   gap: 0.75rem;
@@ -587,7 +711,7 @@ p {
 /* Contact */
 
 .cta {
-  margin: 0 clamp(0.5rem, 1.5vw, 1.25rem);
+  margin: clamp(0.5rem, 1.5vw, 1.25rem) clamp(0.5rem, 1.5vw, 1.25rem) 0;
   padding: clamp(3rem, 7vw, 5rem) 0;
   border-radius: clamp(1.5rem, 3vw, 2.5rem);
   background: var(--brand);
@@ -658,20 +782,60 @@ p {
 /* Footer */
 
 .site-footer {
-  padding: 2rem 0 2.5rem;
+  padding: clamp(2.5rem, 5vw, 4rem) 0 2rem;
   color: var(--muted);
   font-size: 0.9375rem;
 }
 
-.site-footer .wrap {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 0.5rem 2rem;
+.site-footer > .wrap:first-child {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr 1.2fr;
+  gap: 2rem;
 }
 
-.site-footer p {
+.footer-brand p {
+  max-width: 19rem;
+  margin: 1rem 0 0;
+}
+
+.site-footer h2 {
+  margin-bottom: 0.875rem;
+  color: var(--ink);
+  font-size: 0.8125rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.site-footer ul {
+  display: grid;
+  gap: 0.5rem;
   margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-footer li a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.site-footer li a:hover {
+  color: var(--brand);
+  text-decoration: underline;
+}
+
+.copyright {
+  margin-top: 2.5rem;
+  margin-bottom: 0;
+  font-size: 0.875rem;
+}
+
+.copyright::before {
+  content: "";
+  display: block;
+  margin-bottom: 1.5rem;
+  border-top: 1px solid var(--line);
 }
 
 /* Enquiry form: opens from every WhatsApp button and builds the message from the answers */
@@ -876,16 +1040,31 @@ html:has(dialog[open]) {
 /* Smaller screens */
 
 @media (max-width: 64rem) {
-  .cards {
+  .cards,
+  .learn {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .trust {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .site-footer > .wrap:first-child {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .footer-brand {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 62rem) {
+  .site-header nav {
+    display: none;
   }
 }
 
 @media (max-width: 56rem) {
-  .site-header nav {
-    display: none;
-  }
-
   .hero-grid,
   .split {
     grid-template-columns: 1fr;
@@ -926,8 +1105,13 @@ html:has(dialog[open]) {
   }
 
   .trust,
-  .areas {
+  .areas,
+  .learn {
     grid-template-columns: 1fr;
+  }
+
+  .site-footer > .wrap:first-child {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .callbar {
@@ -950,6 +1134,23 @@ html:has(dialog[open]) {
 @media (max-width: 36rem) {
   .cards {
     grid-template-columns: 1fr;
+    gap: 0.875rem;
+  }
+
+  /* Icon beside the text, so six stacked cards do not make the page endless on a phone */
+  .card:not(.card-cta) {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 1rem;
+    padding: 1.25rem;
+  }
+
+  .card:not(.card-cta) .icon-badge {
+    grid-row: 1 / span 2;
+  }
+
+  .card:not(.card-cta) h3 {
+    margin: 0 0 0.3rem;
   }
 
   .actions .btn {
