@@ -826,16 +826,22 @@ p {
 }
 
 .copyright {
-  margin-top: 2.5rem;
-  margin-bottom: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.5rem 2rem;
+  margin: 2.5rem 0 0;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
   font-size: 0.875rem;
 }
 
-.copyright::before {
-  content: "";
-  display: block;
-  margin-bottom: 1.5rem;
-  border-top: 1px solid var(--line);
+.copyright a {
+  color: var(--muted);
+}
+
+.copyright a:hover {
+  color: var(--brand);
 }
 
 /* Enquiry form: opens from every WhatsApp button and builds the message from the answers */
