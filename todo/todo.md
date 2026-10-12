@@ -21,5 +21,5 @@ its status to `done` in both places.
 | [d-012](items/d-012.md) | Facebook and Instagram links | blocked (owner) | P3 |
 | [d-013](items/d-013.md) | Turkish version of the site | done | P3 |
 | [d-014](items/d-014.md) | Owner to read the Turkish pages | open (owner) | P2 |
-| [d-015](items/d-015.md) | Check the safety list against the car | open (owner) | P2 |
+| [d-015](items/d-015.md) | Check the safety list against the car | done | P2 |
 | [d-016](items/d-016.md) | Price card is too wide on 320px phones | open | P3 |
