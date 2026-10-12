@@ -19,7 +19,8 @@ it to GitHub Pages.
 with `hreflang` tags, so when you change one page, change the other. `js/site.js` (the WhatsApp
 message) and `js/consent.js` (the cookie banner) take their wording from `<html lang>`. The Turkish
 letters ğ, ş and İ are in `css/fonts/plus-jakarta-sans-latin-ext.woff2`, which only pages that use
-them download.
+them download. In Turkish text her name is written Şeyma; the school's name stays Seyma Driving
+School.
 
 ## The car
 

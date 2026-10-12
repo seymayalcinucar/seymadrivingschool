@@ -43,7 +43,7 @@
     var whatsapp = links[0].href.split("?")[0];
     // The Turkish pages (site/tr/) write the same message in Turkish.
     var words = document.documentElement.lang === "tr" ? {
-      hello: "Merhaba Seyma Hanım, otomatik vites direksiyon dersi almak istiyorum.",
+      hello: "Merhaba Şeyma Hanım, otomatik vites direksiyon dersi almak istiyorum.",
       name: "Ad soyad",
       area: "Semt/posta kodu",
       before: "Daha önce ders",
