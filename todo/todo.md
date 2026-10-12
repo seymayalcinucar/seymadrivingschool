@@ -7,7 +7,7 @@ its status to `done` in both places.
 
 | id | task | status | priority |
 |---|---|---|---|
-| [d-001](items/d-001.md) | Enforce HTTPS | open (owner) | P1 |
+| [d-001](items/d-001.md) | Enforce HTTPS | done | P1 |
 | [d-002](items/d-002.md) | Google Search Console | open (owner login) | P1 |
 | [d-003](items/d-003.md) | WhatsApp Business greeting message | open (owner) | P1 |
 | [d-004](items/d-004.md) | Test the enquiry form on a real phone | open (owner) | P1 |
