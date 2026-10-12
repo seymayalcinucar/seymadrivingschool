@@ -13,6 +13,20 @@
   enquiryForm();
   revealOnScroll();
 
+  document.querySelectorAll('a[href^="tel:"]').forEach(function (link) {
+    link.addEventListener("click", function () {
+      track("call_tap");
+    });
+  });
+
+  // js/consent.js defines gtag only after the visitor accepts analytics cookies, so nothing is
+  // counted for anyone else.
+  function track(name, params) {
+    if (typeof window.gtag === "function") {
+      window.gtag("event", name, params || {});
+    }
+  }
+
   // Every WhatsApp button opens the enquiry form. Its answers become the WhatsApp message, so
   // nothing leaves the visitor's device until they press send in WhatsApp. Without <dialog>
   // support the buttons stay plain WhatsApp links with the same questions as blanks.
@@ -69,6 +83,7 @@
         "Available: " + fields.times.value.trim()
       ].join("\n");
       var url = whatsapp + "?text=" + encodeURIComponent(message);
+      track("generate_lead", { method: "whatsapp" });
 
       var opened = window.open(url, "_blank");
       if (opened) {

@@ -956,6 +956,93 @@ p {
   color: var(--brand);
 }
 
+.legal {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.25rem;
+}
+
+.link-button {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--muted);
+  font: inherit;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.link-button:hover {
+  color: var(--brand);
+}
+
+.prose .link-button {
+  color: var(--brand-soft);
+}
+
+/* Privacy page text */
+
+.prose h2 {
+  margin: 2.25rem 0 0.75rem;
+  font-size: 1.375rem;
+}
+
+.prose h2:first-child {
+  margin-top: 0;
+}
+
+.prose p {
+  color: var(--muted);
+}
+
+.prose code {
+  padding: 0.1em 0.35em;
+  border-radius: 0.35em;
+  background: var(--tint);
+  font-size: 0.9em;
+}
+
+/* Cookie banner (built by js/consent.js). On phones it sits above the WhatsApp and Call bar. */
+
+.cookie-banner {
+  position: fixed;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  z-index: 40;
+  width: min(100% - 2rem, 27rem);
+  padding: 1.5rem;
+  border: 1px solid var(--line);
+  border-radius: 1.25rem;
+  background: #fff;
+  box-shadow: 0 24px 60px -20px rgba(16, 41, 42, 0.5);
+}
+
+.cookie-banner h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1.0625rem;
+  font-weight: 800;
+}
+
+.cookie-banner p {
+  margin: 0 0 1rem;
+  color: var(--muted);
+  font-size: 0.9375rem;
+}
+
+.cookie-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.625rem;
+}
+
+.cookie-actions .btn {
+  padding: 0.7rem 0.75rem;
+  font-family: inherit;
+  font-size: 0.875rem;
+  white-space: normal;
+  cursor: pointer;
+}
+
 /* Enquiry form: opens from every WhatsApp button and builds the message from the answers */
 
 [hidden] {
@@ -1230,6 +1317,11 @@ html:has(dialog[open]) {
 
   .site-footer > .wrap:first-child {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cookie-banner {
+    right: 1rem;
+    bottom: 5.5rem;
   }
 
   .callbar {

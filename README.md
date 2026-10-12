@@ -12,6 +12,13 @@ flat `#0f3d3e` background, so it must sit on exactly that colour (`--brand` in `
 Every push to `main` runs `.github/workflows/pages.yml`, which uploads `site/` as it is and deploys
 it to GitHub Pages.
 
+## Analytics
+
+Google Analytics 4 (`G-Y35MRWPQNZ`, set in `site/js/consent.js`) is opt-in: nothing is loaded from
+Google and no cookie is set until a visitor presses Accept on the cookie banner. `site/privacy.html`
+describes this, so keep the two in step. To switch Analytics off, remove the `consent.js` script
+tags and the Analytics section of the privacy page.
+
 ## Local
 
 ```
