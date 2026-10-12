@@ -12,6 +12,10 @@ flat `#0f3d3e` background, so it must sit on exactly that colour (`--brand` in `
 Every push to `main` runs `.github/workflows/pages.yml`, which uploads `site/` as it is and deploys
 it to GitHub Pages.
 
+## To do
+
+Open tasks are listed in `todo/todo.md`, with one file per task in `todo/items/`.
+
 ## Analytics
 
 Google Analytics 4 (`G-Y35MRWPQNZ`, set in `site/js/consent.js`) is opt-in: nothing is loaded from
