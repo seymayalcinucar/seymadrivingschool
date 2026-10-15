@@ -963,6 +963,11 @@ p {
   font-weight: 600;
 }
 
+.contact-card .value .email {
+  overflow-wrap: anywhere;
+  min-width: 0;
+}
+
 .contact-card .value {
   display: inline-flex;
   flex-wrap: wrap;
