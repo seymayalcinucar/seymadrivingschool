@@ -46,6 +46,7 @@
       hello: "Merhaba Şeyma Hanım, otomatik vites direksiyon dersi almak istiyorum.",
       name: "Ad soyad",
       area: "Semt/posta kodu",
+      licence: "Provisional ehliyet",
       before: "Daha önce ders",
       yes: "Evet",
       no: "Hayır",
@@ -54,6 +55,7 @@
       hello: "Hi Seyma, I'd like to arrange automatic driving lessons.",
       name: "Name",
       area: "Area/postcode",
+      licence: "Provisional licence",
       before: "Lessons before",
       yes: "Yes",
       no: "No",
@@ -97,6 +99,7 @@
         "",
         words.name + ": " + fields.name.value.trim(),
         words.area + ": " + fields.area.value.trim(),
+        words.licence + ": " + (fields.licence.value === "yes" ? words.yes : words.no),
         words.before + ": " + before,
         words.times + ": " + fields.times.value.trim()
       ].join("\n");
