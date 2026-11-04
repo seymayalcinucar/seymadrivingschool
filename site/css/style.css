@@ -109,6 +109,7 @@ p {
   font-weight: 800;
   letter-spacing: 0.14em;
   text-transform: uppercase;
+  text-wrap: balance;
 }
 
 /* Buttons */
