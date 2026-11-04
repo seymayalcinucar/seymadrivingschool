@@ -8,7 +8,7 @@ its status to `done` in both places.
 | id | task | status | priority |
 |---|---|---|---|
 | [d-001](items/d-001.md) | Enforce HTTPS | done | P1 |
-| [d-002](items/d-002.md) | Google Search Console | open (owner login) | P1 |
+| [d-002](items/d-002.md) | Google Search Console | in progress | P1 |
 | [d-003](items/d-003.md) | WhatsApp Business greeting message | open (owner) | P1 |
 | [d-004](items/d-004.md) | Test the enquiry form on a real phone | open (owner) | P1 |
 | [d-005](items/d-005.md) | Owner to read the privacy page | open (owner) | P2 |
@@ -23,3 +23,14 @@ its status to `done` in both places.
 | [d-014](items/d-014.md) | Owner to read the Turkish pages | open (owner) | P2 |
 | [d-015](items/d-015.md) | Check the safety list against the car | done | P2 |
 | [d-016](items/d-016.md) | Price card is too wide on 320px phones | open | P3 |
+| [d-017](items/d-017.md) | Bing Webmaster Tools and IndexNow | open (owner login) | P1 |
+| [d-018](items/d-018.md) | Google Business Profile: complete it and ask for reviews | open (owner) | P1 |
+| [d-019](items/d-019.md) | Bing Places and Apple Business Connect | open (owner) | P2 |
+| [d-020](items/d-020.md) | GOV.UK "Find a driving instructor" listing | open (owner) | P2 |
+| [d-021](items/d-021.md) | Place names in the titles; "Londra" and "ehliyet" in Turkish | open | P1 |
+| [d-022](items/d-022.md) | Fuller structured data | open | P2 |
+| [d-023](items/d-023.md) | A page for each test centre | open (needs owner facts) | P2 |
+| [d-024](items/d-024.md) | Turkish guide to getting a UK licence | open | P2 |
+| [d-025](items/d-025.md) | Directory listings | open (owner) | P3 |
+| [d-026](items/d-026.md) | Signs on the car | open (owner) | P3 |
+| [d-027](items/d-027.md) | Local groups, the Turkish community and social posts | open (owner) | P3 |
