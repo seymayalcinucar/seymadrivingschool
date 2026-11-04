@@ -38,6 +38,17 @@ Google and no cookie is set until a visitor presses Accept on the cookie banner.
 describes this, so keep the two in step. To switch Analytics off, remove the `consent.js` script
 tags and the Analytics section of the privacy page.
 
+## Search engines
+
+Google Search Console and Bing Webmaster Tools are set up (to-do d-002, d-017). Search Console is
+verified by a TXT record at Namecheap: keep it. `site/b573300efa4ee5182e1ef21f3611275b.txt` is the IndexNow key: keep it
+too. After a change to the pages, tell Bing and the other IndexNow engines:
+
+```
+curl -s -X POST https://api.indexnow.org/indexnow -H 'Content-Type: application/json' \
+  -d '{"host":"seymadrivingschool.com","key":"b573300efa4ee5182e1ef21f3611275b","urlList":["https://seymadrivingschool.com/"]}'
+```
+
 ## Local
 
 ```

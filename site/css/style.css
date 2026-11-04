@@ -1004,6 +1004,14 @@ p {
   margin: 1rem 0 0;
 }
 
+.footer-review {
+  text-wrap: balance;
+}
+
+.footer-review a {
+  font-weight: 700;
+}
+
 .site-footer h2 {
   margin-bottom: 0.875rem;
   color: var(--ink);
