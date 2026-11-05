@@ -989,6 +989,134 @@ p {
   font-size: 0.9375rem;
 }
 
+/* Review page (review.html): a QR code for pupils to scan from Seyma's phone, and a sheet of
+   printable review cards */
+
+.review-hero {
+  text-align: center;
+}
+
+.review-hero .lede {
+  margin-inline: auto;
+}
+
+.qr {
+  width: min(100%, 17rem);
+  margin: 2rem auto 0;
+  /* White border of at least four QR modules, which scanners need */
+  padding: 1.5rem;
+  border-radius: 1.25rem;
+  background: #fff;
+}
+
+.qr svg,
+.rcard svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  shape-rendering: crispEdges;
+}
+
+.qr figcaption {
+  margin-top: 0.875rem;
+  color: var(--ink);
+  font-weight: 700;
+  text-wrap: balance;
+}
+
+.review-own {
+  margin: 2rem 0 0.875rem;
+  color: rgba(247, 243, 234, 0.8);
+}
+
+.review-print {
+  margin: 1.5rem 0 0;
+  font-size: 0.875rem;
+}
+
+.review-print .link-button {
+  color: rgba(247, 243, 234, 0.75);
+}
+
+.print-sheet {
+  display: none;
+}
+
+@media print {
+  @page {
+    size: A4;
+    margin: 10mm;
+  }
+
+  .review-page {
+    padding: 0;
+    background: #fff;
+  }
+
+  .review-page .site-header,
+  .review-page .review-hero,
+  .review-page .site-footer,
+  .review-page .cookie-banner {
+    display: none !important;
+  }
+
+  /* Ten 85 x 55 mm cards (business-card size) with dashed cut lines */
+  .review-page .print-sheet {
+    display: grid;
+    grid-template-columns: repeat(2, 85mm);
+    grid-auto-rows: 55mm;
+    justify-content: center;
+  }
+
+  .rcard {
+    display: flex;
+    align-items: center;
+    gap: 4mm;
+    padding: 4mm 5mm;
+    border: 0.2mm dashed #9aa9a9;
+    color: var(--ink);
+    break-inside: avoid;
+  }
+
+  .rcard svg {
+    flex: none;
+    width: 36mm;
+  }
+
+  .rcard p {
+    margin: 0;
+    font-size: 8.5pt;
+    line-height: 1.35;
+  }
+
+  .rcard .rcard-brand {
+    display: flex;
+    align-items: center;
+    gap: 1.5mm;
+    margin-bottom: 2.5mm;
+    font-size: 7.5pt;
+    font-weight: 800;
+  }
+
+  .rcard-brand img {
+    width: 5mm;
+    height: 5mm;
+  }
+
+  .rcard .rcard-title {
+    margin-bottom: 1.5mm;
+    font-size: 11pt;
+    font-weight: 800;
+    line-height: 1.2;
+  }
+
+  .rcard .rcard-url {
+    margin-top: 2.5mm;
+    color: var(--muted);
+    font-size: 7pt;
+  }
+}
+
 /* Footer */
 
 .site-footer {

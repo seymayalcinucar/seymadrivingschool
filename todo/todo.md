@@ -34,3 +34,4 @@ its status to `done` in both places.
 | [d-025](items/d-025.md) | Directory listings | open (owner) | P3 |
 | [d-026](items/d-026.md) | Signs on the car | open (owner) | P3 |
 | [d-027](items/d-027.md) | Local groups, the Turkish community and social posts | open (owner) | P3 |
+| [d-028](items/d-028.md) | Review page with QR code and printable cards | done | P2 |

@@ -13,6 +13,13 @@
   enquiryForm();
   revealOnScroll();
 
+  // The review page's "Print review cards" button.
+  document.querySelectorAll("[data-print]").forEach(function (button) {
+    button.addEventListener("click", function () {
+      window.print();
+    });
+  });
+
   document.querySelectorAll('a[href^="tel:"]').forEach(function (link) {
     link.addEventListener("click", function () {
       track("call_tap");
