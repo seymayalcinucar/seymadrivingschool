@@ -26,12 +26,12 @@ its status to `done` in both places.
 | [d-017](items/d-017.md) | Bing Webmaster Tools and IndexNow | done | P1 |
 | [d-018](items/d-018.md) | Google Business Profile: complete it and ask for reviews | blocked (Google support) | P1 |
 | [d-019](items/d-019.md) | Bing Places (Apple Maps not eligible) | open (owner, later) | P2 |
-| [d-020](items/d-020.md) | GOV.UK "Find a driving instructor" listing | open (owner) | P2 |
+| [d-020](items/d-020.md) | GOV.UK "Find a driving instructor" listing | done | P2 |
 | [d-021](items/d-021.md) | Place names in the titles; "Londra" and "ehliyet" in Turkish | done | P1 |
 | [d-022](items/d-022.md) | Fuller structured data | done | P2 |
 | [d-023](items/d-023.md) | A page for each test centre | open (needs owner facts) | P2 |
 | [d-024](items/d-024.md) | Turkish guide to getting a UK licence | done | P2 |
-| [d-025](items/d-025.md) | Directory listings | open (owner) | P3 |
+| [d-025](items/d-025.md) | Directory listings | in progress (Nextdoor verifying) | P3 |
 | [d-026](items/d-026.md) | Signs on the car | open (owner) | P3 |
 | [d-027](items/d-027.md) | Local groups, the Turkish community and social posts | open (owner) | P3 |
 | [d-028](items/d-028.md) | Review page with QR code and printable cards | done | P2 |
