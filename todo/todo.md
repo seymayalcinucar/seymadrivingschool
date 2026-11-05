@@ -25,7 +25,7 @@ its status to `done` in both places.
 | [d-016](items/d-016.md) | Price card is too wide on 320px phones | done | P3 |
 | [d-017](items/d-017.md) | Bing Webmaster Tools and IndexNow | done | P1 |
 | [d-018](items/d-018.md) | Google Business Profile: complete it and ask for reviews | blocked (Google support) | P1 |
-| [d-019](items/d-019.md) | Bing Places and Apple Business Connect | open (owner) | P2 |
+| [d-019](items/d-019.md) | Bing Places (Apple Maps not eligible) | open (owner) | P2 |
 | [d-020](items/d-020.md) | GOV.UK "Find a driving instructor" listing | open (owner) | P2 |
 | [d-021](items/d-021.md) | Place names in the titles; "Londra" and "ehliyet" in Turkish | done | P1 |
 | [d-022](items/d-022.md) | Fuller structured data | done | P2 |
