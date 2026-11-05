@@ -22,7 +22,7 @@ its status to `done` in both places.
 | [d-013](items/d-013.md) | Turkish version of the site | done | P3 |
 | [d-014](items/d-014.md) | Owner to read the Turkish pages | open (owner) | P2 |
 | [d-015](items/d-015.md) | Check the safety list against the car | done | P2 |
-| [d-016](items/d-016.md) | Price card is too wide on 320px phones | open | P3 |
+| [d-016](items/d-016.md) | Price card is too wide on 320px phones | done | P3 |
 | [d-017](items/d-017.md) | Bing Webmaster Tools and IndexNow | done | P1 |
 | [d-018](items/d-018.md) | Google Business Profile: complete it and ask for reviews | blocked (Google support) | P1 |
 | [d-019](items/d-019.md) | Bing Places and Apple Business Connect | open (owner) | P2 |

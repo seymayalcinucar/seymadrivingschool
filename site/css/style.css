@@ -1400,9 +1400,10 @@ html:has(dialog[open]) {
 }
 
 @media (max-width: 56rem) {
+  /* minmax(0, ...) so a long word or button can never make the column wider than the screen */
   .hero-grid,
   .split {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .hero-art {
@@ -1446,7 +1447,12 @@ html:has(dialog[open]) {
   }
 
   .site-footer > .wrap:first-child {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  /* Contact gets the full row: the email address is too long for half a 320px screen */
+  .site-footer > .wrap:first-child > div:last-child {
+    grid-column: 1 / -1;
   }
 
   .cookie-banner {
@@ -1537,6 +1543,16 @@ html:has(dialog[open]) {
 @media (max-width: 21.5rem) {
   .site-header .btn {
     display: none;
+  }
+
+  /* "Message on WhatsApp" needs 259px at the normal padding; this fits it on one line at 320px */
+  .price-card {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .price-card .btn {
+    padding-inline: 0.75rem;
+    white-space: normal;
   }
 }
 
