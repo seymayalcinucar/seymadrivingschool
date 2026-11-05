@@ -226,6 +226,10 @@ p {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
+  /* Tap area bigger than the text ("TR" is only 18px wide on phones); the negative margin
+     keeps the header layout unchanged */
+  margin: -0.625rem;
+  padding: 0.625rem;
   color: var(--muted);
   font-size: 0.9375rem;
   font-weight: 700;
@@ -1453,6 +1457,32 @@ html:has(dialog[open]) {
   /* Contact gets the full row: the email address is too long for half a 320px screen */
   .site-footer > .wrap:first-child > div:last-child {
     grid-column: 1 / -1;
+  }
+
+  /* Footer links on touch screens: each row is a 40px tap target instead of 19px */
+  .site-footer h2 {
+    margin-bottom: 0.25rem;
+  }
+
+  .site-footer ul {
+    gap: 0;
+  }
+
+  .site-footer li,
+  .site-footer li a {
+    display: flex;
+    align-items: center;
+    min-height: 2.5rem;
+  }
+
+  .copyright {
+    gap: 0.25rem 2rem;
+  }
+
+  .copyright a,
+  .copyright .link-button {
+    display: inline-block;
+    padding-block: 0.5rem;
   }
 
   .cookie-banner {
