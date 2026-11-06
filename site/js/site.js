@@ -59,7 +59,8 @@
       before: "Daha önce ders",
       yes: "Evet",
       no: "Hayır",
-      times: "Uygun zamanlar"
+      times: "Uygun zamanlar",
+      source: "Nereden duydum"
     } : {
       hello: "Hi Seyma, I'd like to arrange automatic driving lessons.",
       name: "Name",
@@ -70,7 +71,8 @@
       before: "Lessons before",
       yes: "Yes",
       no: "No",
-      times: "Available"
+      times: "Available",
+      source: "Found you through"
     };
 
     links.forEach(function (link) {
@@ -105,7 +107,7 @@
 
       var hours = fields.hours.value.trim();
       var before = fields.before.value === "yes" ? words.yes + (hours ? " (" + hours + ")" : "") : words.no;
-      var message = [
+      var lines = [
         words.hello,
         "",
         words.name + ": " + fields.name.value.trim(),
@@ -113,7 +115,14 @@
         words.licence + ": " + words[fields.licence.value], // no, provisional or full
         words.before + ": " + before,
         words.times + ": " + fields.times.value.trim()
-      ].join("\n");
+      ];
+      // "How did you find Seyma?" is optional; the line is left out when it is not answered.
+      // The answer goes only into the message, never to analytics.
+      var source = fields.source;
+      if (source.value) {
+        lines.push(words.source + ": " + source.options[source.selectedIndex].text);
+      }
+      var message = lines.join("\n");
       var url = whatsapp + "?text=" + encodeURIComponent(message);
       track("generate_lead", { method: "whatsapp" });
 

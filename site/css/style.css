@@ -989,6 +989,80 @@ p {
   font-size: 0.9375rem;
 }
 
+/* Pass-rate table (test-centres.html) */
+
+.rates {
+  width: 100%;
+  margin: 1.5rem 0 0.5rem;
+  border-collapse: collapse;
+  font-variant-numeric: tabular-nums;
+}
+
+.rates caption {
+  caption-side: bottom;
+  padding-top: 0.75rem;
+  color: var(--muted);
+  font-size: 0.875rem;
+  text-align: left;
+}
+
+.rates th,
+.rates td {
+  padding: 0.8rem 0.5rem;
+  border-bottom: 1px solid var(--line);
+  color: var(--ink);
+  text-align: right;
+  vertical-align: top;
+}
+
+.rates th:first-child {
+  padding-left: 0;
+  text-align: left;
+}
+
+.rates th:last-child,
+.rates td:last-child {
+  padding-right: 0;
+}
+
+.rates thead th {
+  color: var(--muted);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  vertical-align: bottom;
+}
+
+.rates small {
+  display: block;
+  margin-top: 0.15rem;
+  color: var(--muted);
+  font-size: 0.8125rem;
+  font-weight: 600;
+}
+
+.rates .here {
+  color: var(--brand);
+}
+
+.rates tfoot th,
+.rates tfoot td {
+  border-bottom: 0;
+  font-weight: 800;
+}
+
+.prose .rates-note {
+  font-size: 0.875rem;
+}
+
+@media (max-width: 30rem) {
+  /* Four columns do not fit a phone; the number of tests is the one to drop */
+  .rates .tests {
+    display: none;
+  }
+}
+
 /* Review page (review.html): a QR code for pupils to scan from Seyma's phone, and a sheet of
    printable review cards */
 
@@ -1335,6 +1409,7 @@ html:has(dialog[open]) {
 .enquiry form {
   position: relative;
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   gap: 1rem;
   padding: 1.75rem 1.5rem 1.5rem;
 }
@@ -1378,6 +1453,7 @@ html:has(dialog[open]) {
 }
 
 .enquiry input[type="text"],
+.enquiry select,
 .enquiry textarea {
   width: 100%;
   padding: 0.75rem 0.9rem;
@@ -1395,7 +1471,18 @@ html:has(dialog[open]) {
   resize: vertical;
 }
 
+.enquiry select {
+  -webkit-appearance: none;
+  appearance: none;
+  min-width: 0; /* a long option must not widen the form on narrow phones */
+  padding-right: 2.5rem;
+  text-overflow: ellipsis;
+  background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5l5 5 5-5' fill='none' stroke='%2310292a' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat right 0.9rem center / 0.75rem;
+  cursor: pointer;
+}
+
 .enquiry input[type="text"]:focus-visible,
+.enquiry select:focus-visible,
 .enquiry textarea:focus-visible {
   border-color: var(--brand-soft);
   outline: 3px solid rgba(23, 89, 90, 0.25);
