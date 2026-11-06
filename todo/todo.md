@@ -35,3 +35,6 @@ its status to `done` in both places.
 | [d-026](items/d-026.md) | Signs on the car | open (owner) | P3 |
 | [d-027](items/d-027.md) | Local groups, the Turkish community and social posts | open (owner) | P3 |
 | [d-028](items/d-028.md) | Review page with QR code and printable cards | done | P2 |
+| [d-029](items/d-029.md) | "How did you find Seyma?" on the enquiry form | done | P1 |
+| [d-030](items/d-030.md) | Cost of learning to drive page | done | P2 |
+| [d-031](items/d-031.md) | Recommend-a-friend reward | open (two decisions left) | P2 |
