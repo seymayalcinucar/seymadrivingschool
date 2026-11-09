@@ -38,3 +38,4 @@ its status to `done` in both places.
 | [d-029](items/d-029.md) | "How did you find Seyma?" on the enquiry form | done | P1 |
 | [d-030](items/d-030.md) | Cost of learning to drive page | done | P2 |
 | [d-031](items/d-031.md) | Recommend-a-friend reward | open (two decisions left) | P2 |
+| [d-032](items/d-032.md) | Nextdoor routine: check every day (5 min), post every two weeks | recurring (owner) | P2 |
