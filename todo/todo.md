@@ -32,7 +32,7 @@ its status to `done` in both places.
 | [d-023](items/d-023.md) | A page for each test centre | open (needs owner facts) | P2 |
 | [d-024](items/d-024.md) | Turkish guide to getting a UK licence | done | P2 |
 | [d-025](items/d-025.md) | Directory listings | in progress (Nextdoor live 2026-11-09) | P3 |
-| [d-026](items/d-026.md) | Signs on the car | open (owner) | P3 |
+| [d-026](items/d-026.md) | Signs on the car (needed before any new Google verification attempt, d-018) | open (owner) | P2 |
 | [d-027](items/d-027.md) | Local groups, the Turkish community and social posts | open (owner) | P3 |
 | [d-028](items/d-028.md) | Review page with QR code and printable cards | done | P2 |
 | [d-029](items/d-029.md) | "How did you find Seyma?" on the enquiry form | done | P1 |
