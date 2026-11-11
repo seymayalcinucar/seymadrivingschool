@@ -18,16 +18,16 @@
   // The Turkish pages (site/tr/) show the banner in Turkish; their privacy page sits beside them.
   var TEXT = document.documentElement.lang === "tr" ? {
     heading: "Bu sitedeki çerezler",
-    body: "Ziyaretçilerin bu siteyi nasıl kullandığını görmek ve siteyi geliştirmek için Google Analytics çerezlerini kullanmak istiyoruz. Bu çerezler isteğe bağlıdır: yalnızca kabul ederseniz kullanılır. ",
+    body: "Siteyi geliştirmek için isteğe bağlı Google Analytics çerezlerini kullanabilir miyiz? Yalnızca kabul ederseniz kullanılır. ",
     policy: "Gizlilik ve çerezler",
-    accept: "Analitik çerezleri kabul et",
-    reject: "Analitik çerezleri reddet"
+    accept: "Kabul et",
+    reject: "Reddet"
   } : {
     heading: "Cookies on this website",
-    body: "We would like to use Google Analytics cookies to see how people use this website, so we can improve it. They are optional: we only set them if you accept. ",
+    body: "Can we use optional Google Analytics cookies to improve this website? We only set them if you accept. ",
     policy: "Privacy and cookies",
-    accept: "Accept analytics cookies",
-    reject: "Reject analytics cookies"
+    accept: "Accept",
+    reject: "Reject"
   };
 
   var gaLoaded = false;
@@ -145,7 +145,8 @@
     banner.setAttribute("role", "region");
     banner.setAttribute("aria-labelledby", "cookie-banner-heading");
 
-    var heading = el("h2", "", TEXT.heading);
+    // The heading names the region for screen readers; on screen the question says it all.
+    var heading = el("h2", "visually-hidden", TEXT.heading);
     heading.id = "cookie-banner-heading";
     banner.appendChild(heading);
 
@@ -190,6 +191,19 @@
   } else if (choice === DENIED) {
     stopGoogleAnalytics();
   } else {
-    showBanner(false);
+    // Ask once the visitor starts reading (first scroll, or after a few seconds), so the banner never
+    // covers the headline and the WhatsApp and Call buttons on arrival. Until they answer, nothing is
+    // loaded from Google and no cookie is set.
+    var asked = false;
+    var ask = function () {
+      if (asked) {
+        return;
+      }
+      asked = true;
+      window.removeEventListener("scroll", ask);
+      showBanner(false);
+    };
+    window.addEventListener("scroll", ask, { passive: true });
+    window.setTimeout(ask, 6000);
   }
 })();

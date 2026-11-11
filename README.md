@@ -22,6 +22,14 @@ letters ğ, ş and İ are in `css/fonts/plus-jakarta-sans-latin-ext.woff2`, whic
 them download. In Turkish text her name is written Şeyma; the school's name stays Seyma Driving
 School.
 
+## Google rating
+
+The rating and review count ("5.0 · 17 Google reviews") appear once on each home page, under the
+headline, in `site/index.html` and `site/tr/index.html`. Update both when the count changes. Every
+Google link visitors see goes to the business page in Maps
+(`https://maps.google.com/?cid=1360433525445105890`); only `review.html` links to the write-a-review
+form.
+
 ## The car
 
 The safety features in the "The car" section come from Toyota's UK equipment list for the Corolla
@@ -34,7 +42,9 @@ Open tasks are listed in `todo/todo.md`, with one file per task in `todo/items/`
 ## Analytics
 
 Google Analytics 4 (`G-Y35MRWPQNZ`, set in `site/js/consent.js`) is opt-in: nothing is loaded from
-Google and no cookie is set until a visitor presses Accept on the cookie banner. `site/privacy.html`
+Google and no cookie is set until a visitor presses Accept on the cookie banner. The banner is a
+slim bar that appears on the first scroll (or after six seconds), so it never covers the headline
+and the WhatsApp and Call buttons when someone arrives. `site/privacy.html`
 describes this, so keep the two in step. To switch Analytics off, remove the `consent.js` script
 tags and the Analytics section of the privacy page.
 

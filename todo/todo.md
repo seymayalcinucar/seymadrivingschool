@@ -39,3 +39,4 @@ its status to `done` in both places.
 | [d-030](items/d-030.md) | Cost of learning to drive page | done | P2 |
 | [d-031](items/d-031.md) | Recommend-a-friend reward | open (two decisions left) | P2 |
 | [d-032](items/d-032.md) | Posting routine: Nextdoor check daily (5 min), post weekly to end of Nov then every two weeks; same post on Google weekly | recurring (owner) | P2 |
+| [d-033](items/d-033.md) | Home page that persuades: done; photo, review quotes, pass photos, an offer and a reply time wait for Seyma | in progress (owner facts) | P1 |
