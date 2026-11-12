@@ -35,6 +35,17 @@ form.
 The safety features in the "The car" section come from Toyota's UK equipment list for the Corolla
 Design grade and from Euro NCAP's 2019 test result. Change the list if the car changes.
 
+## Lesson guide
+
+`site/what-you-will-learn.html` and its Turkish copy `site/tr/derslerde-neler-ogrenilir.html` (a
+Turkish file name) set out DVSA's 27 learner skills in five stages. The skills and the five progress
+levels come from DVSA's "How to record your pupils' progress learning to drive and the skills they
+need" (updated 7 February 2023); the test and theory test facts come from GOV.UK (checked 12 November
+2026). Printed, or saved as a PDF, each page becomes four A4 pages of guide plus a one-page progress
+checklist. The print layout is the `.guide-page` block in `css/style.css`, and the checklist table
+only appears on paper. If DVSA changes the syllabus or the test, update the stage lists and the
+checklist on both pages together, then print both to check nothing spills onto an extra page.
+
 ## To do
 
 Open tasks are listed in `todo/todo.md`, with one file per task in `todo/items/`.

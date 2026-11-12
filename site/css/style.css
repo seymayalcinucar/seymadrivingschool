@@ -505,6 +505,12 @@ p {
   margin-top: 0.35rem;
 }
 
+/* A link under a section's intro to the page that goes deeper (Lessons → what-you-will-learn) */
+.section-link {
+  margin: 0.875rem 0 0;
+  font-weight: 700;
+}
+
 /* A WhatsApp prompt at the end of a section, so the next step is always in reach */
 .nudge {
   display: flex;
@@ -1192,6 +1198,486 @@ p {
     margin-top: 2.5mm;
     color: var(--muted);
     font-size: 7pt;
+  }
+}
+
+/* Lesson guide (what-you-will-learn.html and tr/derslerde-neler-ogrenilir.html): the 27 DVSA
+   skills in five stages, the test at a glance, and a progress checklist that only appears when
+   the page is printed or saved as a PDF */
+
+.stage-nav {
+  margin-top: 1.75rem;
+}
+
+.stage-nav li {
+  padding: 0;
+}
+
+.stage-nav a {
+  display: block;
+  padding: 0.45rem 1rem;
+  border-radius: 999px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.stage-nav a:hover {
+  background: rgba(247, 243, 234, 0.1);
+}
+
+.guide-print {
+  margin: 1.5rem 0 0;
+  font-size: 0.9375rem;
+}
+
+.guide-print .link-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: rgba(247, 243, 234, 0.8);
+}
+
+.guide-print .link-button:hover {
+  color: var(--cream);
+}
+
+.skills {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.skills li {
+  padding: 1.375rem 1.5rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #fff;
+}
+
+.skills h3 {
+  margin: 0 0 0.4rem;
+  font-size: 1.125rem;
+  font-weight: 800;
+}
+
+/* Turkish page: the English name of each skill, as instructors and examiners say it */
+.skills h3 .en {
+  display: block;
+  margin-top: 0.2rem;
+  color: var(--brand-soft);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.skills p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1rem;
+  text-wrap: pretty;
+}
+
+.skills .in-test {
+  margin-top: 0.875rem;
+  padding-top: 0.75rem;
+  border-top: 1px dashed var(--line);
+  font-size: 0.9375rem;
+}
+
+.skills .in-test strong {
+  color: var(--brand-soft);
+}
+
+.levels {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: level;
+}
+
+.levels li {
+  padding: 1.25rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #fff;
+  counter-increment: level;
+}
+
+.levels li::before {
+  content: counter(level);
+  display: grid;
+  place-items: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  margin-bottom: 0.875rem;
+  border-radius: 50%;
+  background: var(--accent);
+  color: var(--ink);
+  font-weight: 800;
+}
+
+.levels h3 {
+  margin: 0 0 0.35rem;
+  font-size: 1.0625rem;
+  font-weight: 800;
+}
+
+.levels h3 .en {
+  display: block;
+  color: var(--brand-soft);
+  font-size: 0.8125rem;
+  font-weight: 700;
+}
+
+.levels p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9375rem;
+}
+
+.guide-ready {
+  max-width: 44rem;
+}
+
+.guide-ready + .actions {
+  margin-top: 1.5rem;
+}
+
+.print-brand,
+.checklist-sheet {
+  display: none;
+}
+
+@media (max-width: 56rem) {
+  .levels {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.75rem;
+  }
+
+  /* Number beside the text, so five levels do not make a long column on a phone */
+  .levels li {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    column-gap: 1rem;
+    padding: 1rem 1.25rem;
+  }
+
+  .levels li::before {
+    grid-row: 1 / span 2;
+    margin: 0;
+  }
+}
+
+@media (max-width: 44rem) {
+  .skills {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.875rem;
+  }
+
+  .skills li {
+    padding: 1.25rem;
+  }
+}
+
+@media print {
+  .guide-page {
+    padding: 0;
+    background: #fff;
+    font-size: 10pt;
+  }
+
+  .guide-page .site-header,
+  .guide-page .site-footer,
+  .guide-page .callbar,
+  .guide-page .cookie-banner,
+  .guide-page .nudge,
+  .guide-page .stage-nav,
+  .guide-page .guide-print,
+  .guide-page .guide-cta,
+  .guide-page .actions {
+    display: none !important;
+  }
+
+  .guide-page a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  /* Contact details at the top of the guide and of the checklist, so a printed copy leads back */
+  .guide-page .print-brand {
+    display: flex;
+    align-items: center;
+    gap: 2.5mm;
+    margin-bottom: 5mm;
+    padding-bottom: 3mm;
+    border-bottom: 0.3mm solid var(--line);
+    font-size: 9pt;
+    font-weight: 800;
+  }
+
+  .print-brand img {
+    width: 7mm;
+    height: 7mm;
+  }
+
+  .print-brand .print-contact {
+    margin-left: auto;
+    color: var(--muted);
+    font-weight: 600;
+  }
+
+  .guide-page .wrap {
+    max-width: none;
+    padding: 0;
+  }
+
+  .guide-page .page-hero {
+    margin: 0;
+    padding: 0 0 2mm;
+    border-radius: 0;
+    background: none;
+    color: var(--ink);
+  }
+
+  .guide-page .page-hero h1 {
+    font-size: 22pt;
+  }
+
+  .guide-page .page-hero .eyebrow {
+    color: var(--brand-soft);
+  }
+
+  .guide-page .page-hero .lede {
+    max-width: none;
+    color: var(--muted);
+  }
+
+  .guide-page .section {
+    padding: 5mm 0 0;
+    background: none;
+  }
+
+  .guide-page .section h2 {
+    font-size: 15pt;
+  }
+
+  /* A stage heading never ends a page: it stays with its intro and the first row of skills */
+  .guide-page .section-head {
+    margin-bottom: 3mm;
+    break-inside: avoid;
+    break-after: avoid;
+  }
+
+  /* The test at a glance is short enough to keep on one page */
+  .guide-page .split {
+    break-inside: avoid;
+  }
+
+  .guide-page .eyebrow {
+    margin-bottom: 1.5mm;
+    font-size: 7.5pt;
+  }
+
+  .guide-page .lede {
+    max-width: none;
+    margin-top: 1.5mm;
+    font-size: 10pt;
+  }
+
+  .guide-page .steps {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4mm;
+  }
+
+  .guide-page .steps li {
+    padding: 11mm 0 0;
+  }
+
+  .guide-page .steps li::before {
+    width: 8mm;
+    height: 8mm;
+    font-size: 10pt;
+  }
+
+  .guide-page .steps li::after {
+    top: 4mm;
+    bottom: auto;
+    left: 10mm;
+    right: -2mm;
+    border-top: 0.6mm dashed #cfd9d4;
+    border-left: 0;
+    transform: none;
+  }
+
+  .guide-page .steps li:last-child::after {
+    display: none;
+  }
+
+  .guide-page .steps h3,
+  .guide-page .skills h3,
+  .guide-page .cards h3,
+  .guide-page .levels h3 {
+    font-size: 10.5pt;
+  }
+
+  .guide-page .steps p,
+  .guide-page .skills p,
+  .guide-page .card p,
+  .guide-page .levels p {
+    font-size: 9pt;
+    line-height: 1.45;
+  }
+
+  .guide-page .skills {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2.5mm;
+  }
+
+  .guide-page .skills li,
+  .guide-page .card,
+  .guide-page .levels li,
+  .guide-page .numbered li {
+    padding: 2.5mm 3mm;
+    border-color: #d5dcd8;
+    border-radius: 2mm;
+    break-inside: avoid;
+  }
+
+  .guide-page .skills .in-test {
+    margin-top: 1.5mm;
+    padding-top: 1.5mm;
+  }
+
+  .guide-page .split {
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    gap: 6mm;
+  }
+
+  .guide-page .numbered {
+    gap: 1.5mm;
+  }
+
+  .guide-page .numbered li {
+    font-size: 9pt;
+  }
+
+  .guide-page .numbered li::before {
+    width: 6mm;
+    height: 6mm;
+  }
+
+  .guide-page .cards {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2.5mm;
+  }
+
+  .guide-page .card {
+    display: block;
+    box-shadow: none;
+    transform: none;
+  }
+
+  .guide-page .card .icon-badge {
+    display: none;
+  }
+
+  .guide-page .card h3 {
+    margin: 0 0 1mm;
+  }
+
+  .guide-page .levels {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 2mm;
+  }
+
+  .guide-page .levels li {
+    display: block;
+  }
+
+  .guide-page .levels li::before {
+    width: 6mm;
+    height: 6mm;
+    margin-bottom: 1.5mm;
+    font-size: 9pt;
+  }
+
+  .guide-page .callout {
+    margin-top: 3mm;
+    padding: 2.5mm 3mm;
+    font-size: 9pt;
+    break-inside: avoid;
+  }
+
+  /* On paper the sources go under the checklist (.checklist-source), which has room to spare,
+     so the guide itself does not spill a line onto an extra page */
+  .guide-page #progress .source {
+    display: none;
+  }
+
+  .checklist-source {
+    margin: 3mm 0 0;
+    color: var(--muted);
+    font-size: 7.5pt;
+  }
+
+  .guide-page .checklist-sheet {
+    display: block;
+    break-before: page;
+  }
+
+  .checklist-sheet h2 {
+    font-size: 15pt;
+  }
+
+  .checklist-sheet > p {
+    margin: 1.5mm 0 3mm;
+    color: var(--muted);
+    font-size: 9pt;
+  }
+
+  .checklist {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 8.5pt;
+    line-height: 1.2;
+  }
+
+  .checklist th,
+  .checklist td {
+    height: 6.6mm;
+    padding: 0 2mm;
+    border: 0.25mm solid #b9c4c0;
+    text-align: left;
+    vertical-align: middle;
+  }
+
+  /* 20mm level columns: the longest Turkish level name (Hatırlatmayla) needs about 19mm */
+  .checklist thead th {
+    font-size: 7.5pt;
+    font-weight: 800;
+  }
+
+  .checklist thead th + th,
+  .checklist td {
+    width: 20mm;
+    text-align: center;
+  }
+
+  .checklist tbody th {
+    font-weight: 600;
+  }
+
+  .checklist .stage-row th {
+    background: var(--tint);
+    font-weight: 800;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
   }
 }
 
