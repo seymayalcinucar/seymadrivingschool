@@ -473,6 +473,19 @@ p {
   grid-template-columns: repeat(3, 1fr);
 }
 
+/* Five cards: three across, then two wider ones, so the last row has no gap */
+.cards-5 {
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.cards-5 > * {
+  grid-column: span 2;
+}
+
+.cards-5 > :nth-child(n + 4) {
+  grid-column: span 3;
+}
+
 .card:hover {
   transform: translateY(-4px);
   border-color: transparent;
@@ -2097,6 +2110,15 @@ html:has(dialog[open]) {
   .cards,
   .safety {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cards-5 > *,
+  .cards-5 > :nth-child(n + 4) {
+    grid-column: auto;
+  }
+
+  .cards-5 > :last-child {
+    grid-column: 1 / -1;
   }
 
   .trust {

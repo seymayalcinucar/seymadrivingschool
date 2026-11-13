@@ -39,7 +39,8 @@ Design grade and from Euro NCAP's 2019 test result. Change the list if the car c
 
 `site/what-you-will-learn.html` and its Turkish copy `site/tr/derslerde-neler-ogrenilir.html` (a
 Turkish file name) set out 26 of DVSA's learner skills in five stages: all but motorways, which
-Seyma leaves out because they are not part of the practical test. The skills and the five progress
+Seyma leaves out because they are not part of the practical test (the home page has no motorway
+lessons card either, and turning the car around is marked as taught but not tested). The skills and the five progress
 levels come from DVSA's "How to record your pupils' progress learning to drive and the skills they
 need" (updated 7 February 2023); the test and theory test facts come from GOV.UK (checked 12 November
 2026). Printed, or saved as a PDF, each page becomes four A4 pages of guide plus a one-page progress
