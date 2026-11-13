@@ -16,7 +16,7 @@ its status to `done` in both places.
 | [d-007](items/d-007.md) | Reviews section | done | P2 |
 | [d-008](items/d-008.md) | About Seyma: bio and photo | blocked (owner) | P2 |
 | [d-009](items/d-009.md) | Mark the enquiry event as a key event | open (owner) | P3 |
-| [d-010](items/d-010.md) | Prices for test day and block bookings | blocked (owner) | P3 |
+| [d-010](items/d-010.md) | Price for test day (block bookings: on request, done) | blocked (owner) | P3 |
 | [d-011](items/d-011.md) | Terms page with the cancellation policy | blocked (owner) | P3 |
 | [d-012](items/d-012.md) | Facebook and Instagram links | blocked (owner) | P3 |
 | [d-013](items/d-013.md) | Turkish version of the site | done | P3 |
