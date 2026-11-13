@@ -12,6 +12,7 @@
 
   enquiryForm();
   revealOnScroll();
+  openLinkedQuestion();
 
   // The review page's "Print review cards" button.
   document.querySelectorAll("[data-print]").forEach(function (button) {
@@ -47,6 +48,7 @@
     var form = dialog.querySelector("form");
     var fields = form.elements;
     var hoursRow = dialog.querySelector("[data-hours]");
+    var referrerRow = dialog.querySelector("[data-referrer]");
     var whatsapp = links[0].href.split("?")[0];
     // The Turkish pages (site/tr/) write the same message in Turkish.
     var words = document.documentElement.lang === "tr" ? {
@@ -60,7 +62,8 @@
       yes: "Evet",
       no: "Hayır",
       times: "Uygun zamanlar",
-      source: "Nereden duydum"
+      source: "Nereden duydum",
+      referrer: "Tavsiye eden"
     } : {
       hello: "Hi Seyma, I'd like to arrange automatic driving lessons.",
       name: "Name",
@@ -72,7 +75,8 @@
       yes: "Yes",
       no: "No",
       times: "Available",
-      source: "Found you through"
+      source: "Found you through",
+      referrer: "Recommended by"
     };
 
     links.forEach(function (link) {
@@ -100,6 +104,7 @@
 
     form.addEventListener("change", function () {
       hoursRow.hidden = fields.before.value !== "yes";
+      referrerRow.hidden = fields.source.value !== "recommendation";
     });
 
     form.addEventListener("submit", function (event) {
@@ -122,6 +127,11 @@
       if (source.value) {
         lines.push(words.source + ": " + source.options[source.selectedIndex].text);
       }
+      // Who recommended them, for the recommend-a-friend offer (only when "A recommendation" is chosen).
+      var referrer = fields.referrer.value.trim();
+      if (source.value === "recommendation" && referrer) {
+        lines.push(words.referrer + ": " + referrer);
+      }
       var message = lines.join("\n");
       var url = whatsapp + "?text=" + encodeURIComponent(message);
       track("generate_lead", { method: "whatsapp" });
@@ -134,6 +144,18 @@
       }
       dialog.close();
     });
+  }
+
+  // A link to a question (such as #recommend-a-friend) opens its answer as well as scrolling to it.
+  function openLinkedQuestion() {
+    function open() {
+      var target = window.location.hash && document.getElementById(window.location.hash.slice(1));
+      if (target && target.tagName === "DETAILS") {
+        target.open = true;
+      }
+    }
+    window.addEventListener("hashchange", open);
+    open();
   }
 
   // Fade sections in as they scroll into view. Without IntersectionObserver, show everything.
