@@ -24,7 +24,7 @@ School.
 
 ## Google rating
 
-The rating and review count ("5.0 · 18 Google reviews") appear once on each home page, under the
+The rating and review count ("5.0 · 19 Google reviews") appear once on each home page, under the
 headline, as a white card with Google's G (`.rating` in `css/style.css`, the G is the `i-google` symbol), in `site/index.html` and `site/tr/index.html`. Update both when the count changes. Every
 Google link visitors see goes to the business page in Maps
 (`https://maps.google.com/?cid=1360433525445105890`); only `review.html` links to the write-a-review
