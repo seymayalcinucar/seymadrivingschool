@@ -29,7 +29,7 @@ its status to `done` in both places.
 | [d-020](items/d-020.md) | GOV.UK "Find a driving instructor" listing | done | P2 |
 | [d-021](items/d-021.md) | Place names in the titles; "Londra" and "ehliyet" in Turkish | done | P1 |
 | [d-022](items/d-022.md) | Fuller structured data | done | P2 |
-| [d-023](items/d-023.md) | A page for each test centre | open (needs owner facts) | P2 |
+| [d-023](items/d-023.md) | A page for each test centre | waiting for Seyma's answers (message to forward drafted 2026-11-19) | P1 |
 | [d-024](items/d-024.md) | Turkish guide to getting a UK licence | done | P2 |
 | [d-025](items/d-025.md) | Directory listings | in progress (Nextdoor live; Driving Schools Directory, GoRoadie, Yell submitted 2026-11-19) | P3 |
 | [d-026](items/d-026.md) | Signs on the car (needed before any new Google verification attempt, d-018) | open (owner) | P2 |
@@ -41,3 +41,4 @@ its status to `done` in both places.
 | [d-032](items/d-032.md) | Posting routine: Nextdoor check daily (5 min), post weekly to end of Nov then every two weeks; same post on Google weekly | recurring (owner) | P2 |
 | [d-033](items/d-033.md) | Home page that persuades: done; photo, review quotes, pass photos, an offer and a reply time wait for Seyma | in progress (owner facts) | P1 |
 | [d-034](items/d-034.md) | Lesson guide page (what you will learn), English and Turkish, with a printable progress checklist | done | P2 |
+| [d-035](items/d-035.md) | Answers to the questions people ask AI and Google (home page FAQ, EN + TR), plus the rest of the 2026-11-19 visibility pass | open (after d-023, needs Seyma) | P2 |
