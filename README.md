@@ -72,6 +72,11 @@ curl -s -X POST https://api.indexnow.org/indexnow -H 'Content-Type: application/
   -d '{"host":"seymadrivingschool.com","key":"b573300efa4ee5182e1ef21f3611275b","urlList":["https://seymadrivingschool.com/"]}'
 ```
 
+The deploy adds a `<lastmod>` date to every sitemap URL, taken from the last commit that changed
+that page (`scripts/sitemap-dates.sh`, run by `.github/workflows/pages.yml`). The sitemap in the repo
+has no dates. A new page needs only its line in `site/sitemap.xml`, written on one line like the others:
+`<url><loc>https://seymadrivingschool.com/page.html</loc></url>`.
+
 ## Local
 
 ```

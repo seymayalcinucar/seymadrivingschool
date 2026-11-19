@@ -22,6 +22,10 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0 # full history, for the sitemap dates
+      - name: Sitemap dates from each page's last commit
+        run: bash scripts/sitemap-dates.sh
       # A phone that cached an older stylesheet would pair it with newer HTML and render a broken
       # page, so every deploy gives the CSS, JS and images a new URL.
       - name: Stamp asset URLs with the commit
